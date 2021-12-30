@@ -1,0 +1,23 @@
+<br/>
+<div class="d-flex justify-content-center align-items-center">
+    <div class="card p-5">
+        <h4 class="card-header">Perfil</h4>
+        <form >
+            <div class="form-group">
+                <label *ngFor="let usuario of usuarios" >Login: {{usuario.Login}}</label>
+            </div>
+            <div class="form-group">
+                <ul *ngFor="let usuario of usuarios" >
+                    <li>
+                        Nome: {{usuario.id}}
+                    </li>
+                </ul>
+                <label ></label>
+            </div><br/>
+            <div class="form-group">
+                <button class="btn btn-success" type="submit" routerLink="/Alterar">Alterar Senha</button>
+                <router-outlet></router-outlet>
+            </div>
+        </form>
+    </div>
+</div>

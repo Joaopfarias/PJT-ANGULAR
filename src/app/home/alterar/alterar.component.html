@@ -1,0 +1,23 @@
+<br/>
+<div class="d-flex justify-content-center align-items-center">
+    <div class="card p-5">
+        <h4 class="card-header">Alterar Senha</h4>
+        <form>
+            <div class="form-group">
+                <label for="email">Senha Antiga</label>
+                <input type="password" id="txtsat" class="form-control" name="txtsat"/>
+            </div>
+            <div class="form-group">
+                <label for="email">Repita a Senha Antiga</label>
+                <input type="password" id="txtrsat" class="form-control" name="txtrsat"/>
+            </div>
+            <div class="form-group">
+                <label for="senha">Nova Senha</label>
+                <input type="password" id="txtns" class="form-control" name="txtns"/>
+            </div><br/>
+            <div class="form-group">
+                <button class="btn btn-success" id="btnats" type="submit" (click)="alterar(usuario.id)">Alterar Senha</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<br/>
+<div class="d-flex justify-content-center align-items-center">
+    <div class="card p-3">
+        <h4 class="card-header">Entrar</h4>
+        <form>
+            <div class="form-group">
+                <label for="email">Login</label>
+                <input type="text" name="login" id="login" class="form-control" [(ngModel)]="usuario.login">
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" class="form-control" [(ngModel)]="usuario.senha">
+            </div><br/>
+            <div class="form-group">
+                <button class="btn btn-success" type="submit" (click)="logarUsuario()">Entrar</button>
+                <button class="btn btn-success" type="submit" routerLink="/Register">Cadastrar</button>
+                <router-outlet></router-outlet>
+            </div>
+        </form>
+    </div>
+</div>
