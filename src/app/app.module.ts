@@ -10,6 +10,7 @@ import { UsuarioService } from './usuario/usuario.service';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { AlterarComponent } from './home/alterar/alterar.component';
+import { AlterarsenhaComponent } from './home/alterar/alterarsenha/alterarsenha.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AlterarComponent } from './home/alterar/alterar.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    AlterarComponent
+    AlterarComponent,
+    AlterarsenhaComponent
   ],
   imports: [
     BrowserModule,

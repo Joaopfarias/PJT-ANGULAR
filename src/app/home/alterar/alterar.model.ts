@@ -1,5 +1,6 @@
 export class AlterarModel{
-    ns?: number;
-    id?: number;
+    nome?:string;
+    sobrenome?:string;
+    login?:string;
     senha?: string;
 }

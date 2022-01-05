@@ -16,7 +16,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private usuarioService: UsuarioService, 
-    private router: Router) { }
+    private router: Router) {
+     }
 
   ngOnInit(): void {
   }
@@ -25,7 +26,7 @@ export class LoginComponent implements OnInit {
     this.usuarioLogin.password = this.usuario.senha
     this.usuarioService.logarUsuarios(this.usuarioLogin).subscribe(usuarios => {
       if(usuarios.login == this.usuario.login){
-        this.router.navigate(['/Home'], { state: { id: usuarios.id } });
+        this.router.navigate(['/Home'], { state: { id: usuarios.id} });
       }
     }, err => {
       console.log('Erro ao logar usuario', err)

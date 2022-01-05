@@ -1,24 +1,27 @@
-<br/>
+<br />
 <div class="d-flex justify-content-center align-items-center">
-    <div class="card p-3">
-        <h4 class="card-header">Registrar</h4>
-        <form>
-            <div class="form-group">
-                <label for="Nome">Nome</label>
-                <input type="text" id="Nome" class="form-control" name="nome" [(ngModel)]="usuario.nome"/>
-            </div>
-            <div class="form-group">
-                <label for="login">Login</label>
-                <input type="text" id="login" class="form-control" name="login" [(ngModel)]="usuario.login"/>
-            </div>
-            <div class="form-group">
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" class="form-control" name="senha" [(ngModel)]="usuario.senha"/>
-            </div><br/>
-            <div class="form-group">
-                <button class="btn btn-primary btn-block">Registrar</button>
-            </div>
-        </form>
+    <div class="card" style="width: 20rem;">
+        <div class="card-header">
+            <h4>Registrar
+                <button id="btnans" class="btn btn-outline-dark btn-sm" type="submit"
+                  (click)="voltar()" style="
+                  position: absolute;
+                  right: 0;
+                  margin-right: 5px;
+                  margin-top: 1px;">Voltar</button></h4>
+        </div>
+        <div class="card-body">
+            <label for="Nome">Nome</label>
+            <input type="text" id="nome" class="form-control" name="nome" [(ngModel)]="usuario.nome" />
+            <label for="Nome">Sobrenome</label>
+            <input type="text" id="sobrenome" class="form-control" name="sobrenome" [(ngModel)]="usuario.sobrenome" />
+            <label for="login">Login</label>
+            <input type="text" id="login" class="form-control" name="login" [(ngModel)]="usuario.login" />
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" class="form-control" name="senha" [(ngModel)]="usuario.senha" />
+        </div>
+        <div class="card-footer" style="display: flex; justify-content: center;">
+            <button class="btn btn-primary btn-block">Registrar</button>
+        </div>
     </div>
-  </div>
-  <router-outlet></router-outlet>
+</div>

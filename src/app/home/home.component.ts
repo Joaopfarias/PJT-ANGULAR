@@ -16,17 +16,25 @@ export class HomeComponent implements OnInit {
     private usuarioService: UsuarioService,
     private router: Router)  {
       this.value = this.router.getCurrentNavigation()?.extras.state;
+      console.log("ID:" + this.value.id)
     }
 
   ngOnInit(): void {
     this.listarUsuario();
   }
-
+  alterarNomeSobrenome(){
+    this.router.navigate(['/Alterar'], { state: { id: this.usuario.id, senha: this.usuario } });
+  }
+  
+  alterarSenha(){
+    console.log(this.usuario.id)
+    console.log(this.usuario.senha)
+    console.log(this.usuario)
+    this.router.navigate(['/Alterarsenha'], { state: { id: this.usuario.id, senha: this.usuario } });
+  }
   listarUsuario(){
-    
       this.usuarioService.listarUsuario(this.value.id).subscribe(usuarios => {
-        this.usuarios = usuarios
-        console.log(this.usuarios)
+        this.usuario = usuarios
       }, err => {
         console.log('Erro ao listar os usuarios', err)
       })

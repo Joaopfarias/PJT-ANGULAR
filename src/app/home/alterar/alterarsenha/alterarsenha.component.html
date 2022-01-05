@@ -1,0 +1,23 @@
+<br />
+<div class="d-flex justify-content-center align-items-center">
+    <div class="card" style="width: 20rem;">
+        <h4 class="card-header">Alterar Senha
+            <button id="btnans" class="btn btn-outline-dark btn-sm" type="submit"
+              (click)="voltar()" style="
+              position: absolute;
+              right: 0;
+              margin-right: 5px;
+              margin-top: 1px;">Voltar</button></h4>
+        <div class="card-body">
+            <label for="email">Senha Antiga</label>
+            <input type="password" id="txtsat" class="form-control" name="txtsat" />
+            <label for="email">Repita a Senha Antiga</label>
+            <input type="password" id="txtrsat" class="form-control" name="txtrsat" />
+            <label for="senha">Nova Senha</label>
+            <input type="password" id="txtns" class="form-control" name="txtns" [(ngModel)]="usuario.senha" />
+        </div>
+        <div class="card-footer" style="display: flex; justify-content: center;">
+            <button class="btn btn-success" id="btnats" type="submit" (click)="alterar()">Salvar Alterações</button>
+        </div>
+    </div>
+</div>
